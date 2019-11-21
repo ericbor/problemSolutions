@@ -1,14 +1,14 @@
 package linked.lists;
 
-import helpers.Node;
+import helpers.ListNode;
 
 import java.util.HashSet;
 
 public class RemoveDuplicates {
 
-    public void deleteDuplicates(Node n) {
+    public void deleteDuplicates(ListNode n) {
         HashSet<Integer> set = new HashSet<>();
-        Node previous = null;
+        ListNode previous = null;
 
         while (n != null) {
             if (set.contains(n.value)) {
@@ -23,11 +23,11 @@ public class RemoveDuplicates {
     }
 
     public static void main(String[] args) {
-        Node head = new Node(2);
-        head.next = new Node(2);
-        head.next.next = new Node(3);
-        head.next.next.next = new Node(2);
-        head.next.next.next.next = new Node(4);
+        ListNode head = new ListNode(2);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(2);
+        head.next.next.next.next = new ListNode(4);
 
         RemoveDuplicates rm = new RemoveDuplicates();
         rm.deleteDuplicates(head);
